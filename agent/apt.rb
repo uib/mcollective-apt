@@ -17,10 +17,10 @@ module MCollective
                 reply[:status] = %x[/usr/bin/apt-get update > /dev/null 2>&1 && echo OK || echo FAILED].chomp!
             end
             action "upgrade" do
-                reply[:status] = %x[/usr/bin/apt-get upgrade -y > /dev/null 2>&1 && echo OK || echo FAILED].chomp!
+                reply[:status] = %x[/usr/bin/apt-get upgrade --force-yes > /dev/null 2>&1 && echo OK || echo FAILED].chomp!
             end
             action "distupgrade" do
-                reply[:status] = %x[/usr/bin/apt-get dist-upgrade -y > /dev/null 2>&1 && echo OK || echo FAILED].chomp!
+                reply[:status] = %x[/usr/bin/apt-get dist-upgrade --force-yes > /dev/null 2>&1 && echo OK || echo FAILED].chomp!
             end
         end
     end
