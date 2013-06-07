@@ -7,12 +7,15 @@ mco apt [OPTIONS] [FILTERS] <ACTION>
 
 The ACTION can be one of the following:
 
-    upgrades        - list number of available package upgrades                 
-    installed       - list number of installed packages
-    clean           - clean package archive files (i.e. apt-get clean)
-    update          - update apt-get's local database (i.e. apt-get update)
-    upgrade         - perform system upgrade (i.e. apt-get upgrade)
-    distupgrade     - perform system dist-upgrade (i.e. apt-get dist-upgrade)
+    upgrades            - list number of available package upgrades                 
+    installed           - list number of installed packages
+    clean               - clean package archive files (i.e. apt-get clean)
+    update              - update apt-get's local database (i.e. apt-get update)
+    upgrade             - perform system upgrade (i.e. apt-get upgrade)
+    force-upgrade       - perform forced system upgrade (i.e. apt-get upgrade)
+    distupgrade         - perform system dist-upgrade (i.e. apt-get dist-upgrade)
+    force-distupgrade   - perform forced system dist-upgrade (i.e. apt-get dist-upgrade)
+    fixbroken           - attemt to fix broken packages
     END_OF_USAGE
 
     def post_option_parser(configuration)
