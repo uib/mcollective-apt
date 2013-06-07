@@ -46,10 +46,34 @@ action "upgrade", :description => "Perform System Upgrade" do
            :display_as  => "Update Execution"
 end
 
+action "force-upgrade", :description => "Perform Forced System Upgrade" do
+    display :always
+
+    output :status,
+           :description => "Status of upgrade exection",
+           :display_as  => "Update Execution"
+end
+
 action "distupgrade", :description => "Perform System Dist-Upgrade" do
     display :always
 
     output :status,
-           :description => "Status of ugrade exection",
+           :description => "Status of upgrade exection",
            :display_as  => "Update Execution"
+end
+
+action "force-distupgrade", :description => "Perform Forced System Dist-Upgrade" do
+    display :always
+
+    output :status,
+           :description => "Status of upgrade exection",
+           :display_as  => "Update Execution"
+end
+
+action "fixbroken", :description => "Attemt to fix broken packages" do
+    display :always
+
+    output :status,
+           :description => "Status of fix-broken",
+           :display_as  => "Result of fix-broken"
 end

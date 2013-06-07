@@ -23,8 +23,8 @@ The ACTION can be one of the following:
       else
         action = ARGV.shift
 
-        unless action.match(/^(upgrades|installed|clean|update|upgrade|distupgrade)$/)
-          raise "Action can only be upgrades, installed, clean, update, upgrade or distupgrade"
+        unless action.match(/^(upgrades|installed|clean|update|upgrade|force-upgrade|distupgrade|force-distupgrade|fixbroken)$/)
+          raise "Action can be one of the following: upgrades, installed, clean, update, upgrade, force-upgrade, distupgrade, force-distupgrade and fixbroken"
         end
       
         configuration[:action]  = action
