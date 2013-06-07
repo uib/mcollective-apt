@@ -4,7 +4,7 @@ metadata    :name        => "SimpleRPC Agent For APT Management for Mcollective"
             :license     => "GPLv2",
             :version     => "1.3",
             :url         => "https://github.com/uib/mcollective-apt",
-            :timeout     => 90
+            :timeout     => 3600
 
 action "upgrades", :description => "Get the total number of packages available for upgrade" do
     display :always
