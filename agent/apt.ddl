@@ -77,3 +77,19 @@ action "fixbroken", :description => "Attemt to fix broken packages" do
            :description => "Status of fix-broken",
            :display_as  => "Result of fix-broken"
 end
+
+action "autoclean", :description => "Perform cache autoclean" do
+    display :always
+
+    output :status,
+           :description => "Status of upgrade exection",
+           :display_as  => "Update Execution"
+end
+
+action "autoremove", :description => "Perform autoremove of unused packages" do
+    display :always
+
+    output :status,
+           :description => "Status of upgrade exection",
+           :display_as  => "Update Execution"
+end
