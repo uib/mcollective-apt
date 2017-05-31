@@ -35,7 +35,14 @@ module MCollective
             action "fixbroken" do
                 reply[:status] = %x[/usr/bin/apt-get install -f -y > /dev/null 2>&1 && echo OK || echo FAILED].chomp!
             end
-
+            action "autoremove" do
+                reply[:status] = %x[/usr/bin/apt-get autoremove -y > /dev/null 2>&1 && echo OK || echo FAILED].chomp!
+            end
+            
+            action "autoclean" do
+                reply[:status] = %x[/usr/bin/apt-get autoclean -y > /dev/null 2>&1 && echo OK || echo FAILED].chomp!
+            end
+            
         end
     end
 end
