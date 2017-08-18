@@ -2,7 +2,7 @@ module MCollective
     module Agent
         class Apt<RPC::Agent
             action "upgrades" do
-                reply[:status] = %x[echo -e 'n\n '| /usr/bin/apt-get -q dist-upgrade 2>/dev/null | grep "upgraded," | awk '{ print $1 }'].chomp!
+                reply[:status] = %x[echo -e 'n\n '| LANG=C /usr/bin/apt-get -q dist-upgrade 2>/dev/null | grep "upgraded," | awk '{ print $1 }'].chomp!
             end
 
             action "installed" do
